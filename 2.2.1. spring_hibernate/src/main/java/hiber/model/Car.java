@@ -15,13 +15,11 @@ public class Car {
 
     @Column(name = "series")
     private int series;
-    @OneToOne
-    @JoinColumn
-    private User user;
 
     public Car() {
 
     }
+
     public Car(String model, int series) {
         this.model = model;
         this.series = series;
@@ -51,4 +49,11 @@ public class Car {
         this.series = series;
     }
 
+    @Override
+    public String toString() {
+        return "Car " +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", series=" + series;
+    }
 }
