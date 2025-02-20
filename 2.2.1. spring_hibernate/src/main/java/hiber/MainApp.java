@@ -1,13 +1,9 @@
 package hiber;
 
 import hiber.config.AppConfig;
-import hiber.model.Car;
-import hiber.model.User;
 import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import java.sql.SQLException;
-import java.util.List;
 
 public class MainApp {
     public static void main(String[] args) throws SQLException {
@@ -18,7 +14,7 @@ public class MainApp {
 
 //      user4.setUserCar(car4);
 //      userService.add(user4);
-        userService.getUserByCar("BMW", 1);
+        System.out.println(userService.getUserByCarModelAndSeries("MAZ", 1));
 
 
 //      List<User> users = userService.listUsers();
